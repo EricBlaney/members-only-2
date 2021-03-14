@@ -1,0 +1,8 @@
+<br>
+<%= form_with model: Post.new do |form| %>
+<%= form.label :title %>
+<%= form.text_field :title, placeholder: "Secret title" %>  <br>
+<%= form.label :body %> 
+<%= form.text_field :body, placeholder: "Secret body" %>  <br>
+<%= form.submit "Submit"%>
+<% end %>

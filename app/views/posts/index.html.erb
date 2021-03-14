@@ -1,0 +1,11 @@
+<h1>Welcome to the home of secrets.</h1>
+<%= link_to "New Secret", new_post_path %>
+<% if user_signed_in? %>
+<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+<% else%>
+<%= link_to "Login", new_user_session_path%>
+<% end %>
+
+<%= render "post", post: @post %>
+
+
